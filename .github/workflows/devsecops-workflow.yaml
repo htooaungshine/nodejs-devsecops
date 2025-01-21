@@ -47,6 +47,6 @@ jobs:
         uses: zaproxy/action-baseline@v0.6.1
         with:
           docker_name: 'owasp/dependency-check'
-          target: 'http://example.com/'
+          target: 'http://ayapay.com/'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
