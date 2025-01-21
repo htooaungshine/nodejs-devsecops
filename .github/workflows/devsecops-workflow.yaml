@@ -7,6 +7,8 @@ jobs:
     name: Run unit tests and SAST scan on the source code 
     steps:
     - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
     - uses: actions/setup-node@v3
       with:
         node-version: 16
@@ -21,6 +23,7 @@ jobs:
         args: >
           -Dsonar.organization=innovationtesting
           -Dsonar.projectKey=innovationtesting
+          -Dsonar.branch.name=main
   security:
     runs-on: ubuntu-latest
     needs: build
